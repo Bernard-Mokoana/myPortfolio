@@ -1,7 +1,7 @@
 // components/Skills.jsx
 import React from "react";
 import { FaCode, FaDatabase, FaFlask, FaJava, FaTools } from "react-icons/fa";
-import {  SiCplusplus, SiCss3, SiExpress, SiGit, SiGithub, SiHtml5, SiJavascript, SiMongodb, SiMysql, SiNodedotjs, SiPostgresql, SiPostman, SiPython, SiReact, SiTailwindcss, SiVite  } from "react-icons/si";
+import {  SiCplusplus, SiCss3, SiExpress, SiFirebase, SiGit, SiGithub, SiHtml5, SiJavascript, SiMongodb, SiMysql, SiNodedotjs, SiPostgresql, SiPostman, SiPython, SiReact, SiTailwindcss, SiVite, SiVsco  } from "react-icons/si";
 
 function Skills() {
   return (
@@ -35,8 +35,9 @@ function Skills() {
               <SiMongodb size={26} className="text-green-400"/>
               <SiMysql size={26} className="text-blue-400" />
               <SiPostgresql size={26} className="text-yellow-400"/>
+              <SiFirebase size={26} className="text-orange-400"/>
             </div>
-            <p className="text-sm mt-2 text-gray-300">Experience with MongoDB, SQL, and PostgreSQL.</p>
+            <p className="text-sm mt-2 text-gray-300">Experience with MongoDB, SQL, PostgreSQL, and Firebase.</p>
           </div>
 
           <div className="flex flex-col items-center">
@@ -52,7 +53,7 @@ function Skills() {
             <SiGithub size={24}  />
             <SiVite size={24} className="text-orange-400" />
             </div>
-            <p className="text-sm mt-2 text-gray-300">Hands-on with React, Node.js, express.js, TailwindCss, Git, Github, and Postman</p>
+            <p className="text-sm mt-2 text-gray-300">Hands-on with React, vite, Node.js, express.js, TailwindCss, Git, Github, and Postman</p>
           </div>
 
 
