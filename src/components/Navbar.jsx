@@ -62,9 +62,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
-               <a href="./Hero.jsx">
                <h1 className="text-white text-2xl font-bold">Portfolio</h1>
-               </a>
             </div>
 
             {/* Desktop navigation */}
