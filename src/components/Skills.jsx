@@ -37,7 +37,7 @@ function Skills() {
               <SiPostgresql size={26} className="text-yellow-400"/>
               <SiFirebase size={26} className="text-orange-400"/>
             </div>
-            <p className="text-sm mt-2 text-gray-300">Experience with MongoDB, SQL, PostgreSQL, and Firebase.</p>
+            <p className="text-sm mt-2 text-gray-300">MongoDB, SQL, PostgreSQL, and Firebase.</p>
           </div>
 
           <div className="flex flex-col items-center">
@@ -53,7 +53,7 @@ function Skills() {
             <SiGithub size={24}  />
             <SiVite size={24} className="text-orange-400" />
             </div>
-            <p className="text-sm mt-2 text-gray-300">Hands-on with React, vite, Node.js, express.js, TailwindCss, Git, Github, and Postman</p>
+            <p className="text-sm mt-2 text-gray-300">React, Vite, Node.js, express.js, TailwindCss, Git, Github, and Postman</p>
           </div>
 
 
