@@ -86,7 +86,7 @@ export default function Navbar() {
           {/* Social Icons */}
           <div className="hidden md:flex space-x-4">
             <a
-              href="https://www.linkedin.com/in/bernard-mokoana"
+              href="https://www.linkedin.com/in/bernard-mokoana-680519228/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-yellow-400 hover:text-yellow-300 transition-colors duration-200"

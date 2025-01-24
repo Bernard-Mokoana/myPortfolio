@@ -46,7 +46,7 @@ function Hero() {
             <a href="0711519377" className="text-gray-300 hover:text-yellow-400 transition duration-300">
               <FaPhone size={28} />
             </a>
-            <a href="https://www.linkedin.com/in/bernard-mokoana" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition duration-300">
+            <a href="https://www.linkedin.com/in/bernard-mokoana-680519228/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition duration-300">
               <FaLinkedin size={28} />
             </a>
             <a href="https://github.com/Bernard-Mokoana" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition duration-300">

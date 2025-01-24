@@ -28,12 +28,12 @@ function Contact() {
               <div className="flex items-center space-x-2">
                 <FaLinkedin className="text-blue-400" />
                 <a
-                  href="https://www.linkedin.com/in/bernard-mokoana"
+                  href="https://www.linkedin.com/in/bernard-mokoana-680519228/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                 https://www.linkedin.com/in/bernard-mokoana
+                https://www.linkedin.com/in/bernard-mokoana
                 </a>
               </div>
 

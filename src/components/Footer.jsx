@@ -17,7 +17,7 @@ function Footer() {
           </a>
           
           <a
-            href="https://www.linkedin.com/in/bernard-mokoana"
+            href="https://www.linkedin.com/in/bernard-mokoana-680519228/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors duration-300"
