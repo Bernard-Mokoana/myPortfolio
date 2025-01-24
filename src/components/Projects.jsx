@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my projects and skills, featuring animations and a responsive design.",
-    technologies: ["React", "Framer Motion", "TailwindCSS"],
+    technologies: ["React", "TailwindCSS"],
     liveLink: "https://bernard-mokoana.github.io/myPortfolio/",
     sourceCode: "https://github.com/Bernard-Mokoana/myPortfolio",
   },
