@@ -1,7 +1,7 @@
 // components/Skills.jsx
 import React from "react";
 import { FaCode, FaDatabase, FaFlask, FaJava, FaTools } from "react-icons/fa";
-import {  SiCplusplus, SiCss3, SiExpress, SiGit, SiGithub, SiHtml5, SiJavascript, SiMongodb, SiMysql, SiNodedotjs, SiPostgresql, SiPostman, SiPython, SiReact, SiTailwindcss  } from "react-icons/si";
+import {  SiCplusplus, SiCss3, SiExpress, SiGit, SiGithub, SiHtml5, SiJavascript, SiMongodb, SiMysql, SiNodedotjs, SiPostgresql, SiPostman, SiPython, SiReact, SiTailwindcss, SiVite  } from "react-icons/si";
 
 function Skills() {
   return (
@@ -50,6 +50,7 @@ function Skills() {
             <SiPostman size={24} className="text-orange-400" />
             <SiGit size={24} className="text-red-400" />
             <SiGithub size={24}  />
+            <SiVite size={24} className="text-orange-400" />
             </div>
             <p className="text-sm mt-2 text-gray-300">Hands-on with React, Node.js, express.js, TailwindCss, Git, Github, and Postman</p>
           </div>

@@ -41,9 +41,9 @@ function Education() {
                 "Introductory Algebra And Calculus I",
                 "Introductory Algebra And Calculus 2",
                 "Advanced Calculus 1",
+                "Multivariable Calculus 2",
                 "Linear Algebra 1",
                 "Linear Algebra 2",
-                "Multivariable Calculus 2",
             ],
         },
     ]
@@ -85,7 +85,7 @@ function Education() {
             {currentSection.icon}
             <h3 className="text-2xl font-semibold">{currentSection.title}</h3>
           </div>
-          <ul className="list-disc list-inside text-gray-300">
+          <ul className="list-disc list-inside  text-gray-300">
             {currentSection.modules.map((module, i) => (
               <li key={i}>{module}</li>
             ))}

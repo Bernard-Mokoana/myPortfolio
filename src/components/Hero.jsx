@@ -2,23 +2,24 @@
 import React from "react";
 import { FaFlask, FaAtom, FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaCode } from "react-icons/fa";
 
+
 function Hero() {
   return (
     <section id="hero" className="h-screen bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 text-white flex items-center justify-center px-8">
       <div className="flex flex-col md:flex-row items-center max-w-6xl w-full">
-        {/* Picture Section */}
+        
         <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white overflow-hidden border-4 border-gray-600 shadow-lg flex-shrink-0">
           <img
-            src="/src/assets/images/IMG_3953.JPG" 
-            alt="Your Portrait"
+            src="./images/IMG_3953.JPG" 
+            alt="Image"
             className="w-full h-full object-cover"
           />
         </div>
 
-        {/* Content Section */}
+      
         <div className="mt-8 md:mt-0 md:ml-12 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Hi, I&apos;m Bernard Mokoana
+            Bernard Mokoana
           </h1>
           <p className="text-lg md:text-xl mb-6">
             A passionate <span className="text-yellow-400">Computer Science</span> & <span className="text-green-400">Chemistry</span> student

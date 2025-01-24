@@ -20,15 +20,15 @@ function About() {
             </p>
             <div className="flex justify-center space-x-8 mt-6">
               <div className="text-center">
-                <FaUserGraduate size={48} className="text-blue-400 mb-2" />
+                <FaUserGraduate size={48} className="text-blue-400 mb-2 ml-2" />
                 <p className="text-lg">Student</p>
               </div>
               <div className="text-center">
-                <FaLightbulb size={48} className="text-yellow-400 mb-2" />
+                <FaLightbulb size={48} className="text-yellow-400 mb-2 ml-3" />
                 <p className="text-lg">Innovator</p>
               </div>
               <div className="text-center">
-                <FaFlask size={48} className="text-green-400 mb-2" />
+                <FaFlask size={48} className="text-green-400 mb-2 ml-2" />
                 <p className="text-lg">Scientist</p>
               </div>
             </div>
