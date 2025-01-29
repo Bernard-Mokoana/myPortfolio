@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full bg-gray-900 p-4"
+      className="fixed top-0 left-0 w-full bg-gray-900 z-50 shadow-lg p-4"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
