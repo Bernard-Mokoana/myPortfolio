@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const navigation = [
-  { name: 'About', href: '#about', color: 'text-yellow-400' },
-  { name: 'Skills', href: '#skills', color: 'text-green-400' },
-  { name: 'Education', href: '#education', color: 'text-teal-400' },
-  { name: 'Projects', href: '#projects', color: 'text-blue-400' },
-  { name: 'Contact', href: '#contact', color: 'text-pink-400' },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Education", href: "#education" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800">
+    <motion.nav
+      className="fixed top-0 left-0 w-full bg-gray-900 p-4"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* Mobile menu button */}
@@ -62,20 +68,29 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
-               <h1 className="text-white text-2xl font-bold">Portfolio</h1>
+              <a href="#hero">
+                <img
+                  className="h-12 w-auto"
+                  src="https://www.svgrepo.com/show/2730/portfolio.svg"
+                  alt="My Portfolio"
+                />
+              </a>
             </div>
 
             {/* Desktop navigation */}
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
+                {navigation.map((item, index) => (
+                  <motion.a
+                    key={index}
                     href={item.href}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.2, duration: 0.5 }}
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     {item.name}
-                  </a>
+                  </motion.a>
                 ))}
               </div>
             </div>
@@ -111,7 +126,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="sm:hidden">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3 }}
+          className="sm:hidden bg-gray-900"
+        >
           <div className="space-y-1 px-2 pt-2 pb-3">
             {navigation.map((item) => (
               <a
@@ -123,8 +144,8 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-        </div>
+        </motion.div>
       )}
-    </nav>
+    </motion.nav>
   );
 }
