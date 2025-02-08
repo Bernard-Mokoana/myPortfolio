@@ -1,7 +1,46 @@
-import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
 
 function Contact() {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus("⚠️ Please fill in all fields.");
+      return;
+    }
+
+    setLoading(true);
+    setStatus("Sending...");
+
+    try {
+      const response = await fetch("http://localhost:5000/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setStatus("✅ Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus(`❌ Error: ${result.message}`);
+      }
+    } catch (error) {
+      setStatus("⚠️ Failed to send message.", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-4">
@@ -11,17 +50,11 @@ function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="space-y-4">
             <h3 className="text-xl font-semibold">Contact Information</h3>
-            <p>
-              Feel free to reach out to me using the form or through the details below:
-            </p>
+            <p>Feel free to reach out to me using the form or through the details below:</p>
             <div className="space-y-2">
-
               <div className="flex items-center space-x-2">
                 <FaEnvelope className="text-pink-400" />
-                <a
-                  href="mailto:bernardmokoana@gmail.com"
-                  className="hover:underline"
-                >
+                <a href="mailto:bernardmokoana@gmail.com" className="hover:underline">
                   bernardmokoana@gmail.com
                 </a>
               </div>
@@ -33,11 +66,9 @@ function Contact() {
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                https://www.linkedin.com/in/bernard-mokoana
+                  LinkedIn Profile
                 </a>
               </div>
-
-
               <div className="flex items-center space-x-2">
                 <FaGithub className="text-gray-400" />
                 <a
@@ -46,57 +77,55 @@ function Contact() {
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                  https://github.com/Bernard-Mokoana
+                  GitHub Profile
                 </a>
               </div>
-
               <div className="flex items-center space-x-2">
                 <FaPhone className="text-yellow-400" />
-                <a
-                  href="0711519377"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                 0711519377
-                </a>
+                <span>071 151 9377</span>
               </div>
             </div>
           </div>
 
-         
-
-
           {/* Contact Form */}
-          <form
-            action="#"
-            method="POST"
-            className="space-y-4 bg-gray-800 p-6 rounded-lg shadow-md"
-          >
+          <form onSubmit={handleSubmit} className="space-y-4 bg-gray-800 p-6 rounded-lg shadow-md">
             <input
               type="text"
               name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Your Name"
+              required
               className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none"
             />
             <input
               type="email"
               name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Your Email"
+              required
               className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none"
             />
             <textarea
               name="message"
+              value={formData.message}
+              onChange={handleChange}
               rows="5"
               placeholder="Your Message"
+              required
               className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none"
-            ></textarea>
+            />
             <button
               type="submit"
-              className="bg-blue-500 px-6 py-3 rounded text-white hover:bg-blue-700 transition"
+              className={`w-full bg-blue-500 px-6 py-3 rounded text-white hover:bg-blue-700 transition ${
+                loading && "opacity-50 cursor-not-allowed"
+              }`}
+              disabled={loading}
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
+            {status && <p className="mt-4 text-center">{status}</p>}
           </form>
         </div>
       </div>
