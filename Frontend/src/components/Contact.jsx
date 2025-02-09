@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa";
 
 function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState({message: "", type: ""});
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -13,15 +13,15 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
-      setStatus("⚠️ Please fill in all fields.");
+      setStatus("Please fill in all fields.");
       return;
     }
 
     setLoading(true);
-    setStatus("Sending...");
+    setStatus({message: "Sending...", type: "info" });
 
     try {
-      const response = await fetch("http://localhost:5000/send-message", {
+      const response = await fetch("http://localhost:5000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -29,13 +29,15 @@ function Contact() {
 
       const result = await response.json();
       if (result.success) {
-        setStatus("✅ Message sent successfully!");
+        setStatus({ message: "Message sent successfully!", type: "success"});
         setFormData({ name: "", email: "", message: "" });
+
+        setTimeout(() => setStatus({message: "", type: ""}), 5000);
       } else {
-        setStatus(`❌ Error: ${result.message}`);
+        setStatus({message: `Error: ${result.message}`, type: "error" });
       }
     } catch (error) {
-      setStatus("⚠️ Failed to send message.", error);
+      setStatus({message: "Failed to send message. Please try again later.", type: error});
     } finally {
       setLoading(false);
     }
@@ -125,7 +127,9 @@ function Contact() {
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
-            {status && <p className="mt-4 text-center">{status}</p>}
+
+
+            {status.message && <p className="mt-4 text-center">{status.message}</p>}
           </form>
         </div>
       </div>
