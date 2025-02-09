@@ -21,7 +21,7 @@ function Contact() {
     setStatus({message: "Sending...", type: "info" });
 
     try {
-      const response = await fetch("https://myportfolio-backend-wsqu.onrender.com/contact", {
+      const response = await fetch("https://myportfolio-backend-wsqu.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
