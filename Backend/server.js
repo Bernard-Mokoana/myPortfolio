@@ -3,7 +3,7 @@ import cors from "cors";
 import contactRoutes from "./src/routes/contactRoutes.js"
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
 app.use(express.json());
 app.use(cors());
