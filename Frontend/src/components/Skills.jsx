@@ -31,14 +31,13 @@ const iconAnimationVariants = {
 
 function Skills() {
   return (
-    <div className="flex flex-col gap-10 overflow-x-hidden">
       <motion.section
         variants={gridContainerVariants}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }} 
         id="skills"
-        className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white py-16"
+        className="h-screen bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 text-white flex items-center justify-center px-8"
       >
         <div className="max-w-6xl mx-auto px-8 text-center">
           <h2 className="text-4xl font-bold mb-8">My Skills</h2>
@@ -49,7 +48,7 @@ function Skills() {
 
           <motion.div
             variants={gridContainerVariants}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3"
           >
             {/* Programming Languages */}
             <motion.div
@@ -115,7 +114,7 @@ function Skills() {
             </motion.div>
 
             {/* Chemistry */}
-            <motion.div
+            {/* <motion.div
               custom="right"
               variants={iconAnimationVariants}
               className="flex flex-col items-center"
@@ -125,11 +124,11 @@ function Skills() {
               <p className="text-sm mt-2 text-gray-300">
                 Skilled in laboratory analysis and chemical modeling.
               </p>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </motion.section>
-    </div>
+
   );
 }
 

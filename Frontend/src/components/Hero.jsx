@@ -91,6 +91,20 @@ function Hero() {
             <motion.a href="https://github.com/Bernard-Mokoana" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition duration-300" whileHover="hover" variants={iconVariants}>
               <FaGithub size={28} />
             </motion.a>
+
+             
+          {/* View Projects Button */}
+          <div className=" space-x-4">
+            <button>  <a
+              href="#projects"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-6 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              >
+                View Projects
+              </a> </button>
+          </div>
+
           </motion.div>
         </motion.div>
       </div>

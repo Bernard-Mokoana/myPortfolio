@@ -10,10 +10,10 @@ function Education() {
       icon: <FaLaptop size={28} className='text-blue-400 mr-3' />,
       title: "Computer Science",
       modules: [
-        "Introduction To Computing And Programming",
-        "Structured Programming",
-        "Object-Oriented Programming",
-        "Data Structures and Algorithms",
+        "Introduction To Computing And Programming(Python)",
+        "Structured Programming(C++)",
+        "Object-Oriented Programming(Java)",
+        "Data Structures and Algorithms(Java)",
         "Software Engineering",
       ],
     },
@@ -54,7 +54,8 @@ function Education() {
   const currentSection = educationSections[currentIndex];
 
   return (
-    <section id='education' className="relative z-10 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 text-white py-12 md:py-16">
+    <section id='education' 
+    className="relative z-10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-12 md:py-16">
       <motion.div 
         className="max-w-6xl mx-auto px-4 sm:px-8"
         initial={{ opacity: 0 }}

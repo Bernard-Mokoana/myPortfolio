@@ -3,7 +3,8 @@ import { FaFlask, FaLightbulb, FaUserGraduate } from "react-icons/fa";
 
 function About() {
   return(
-  <section id="about" className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white py-16">
+  <section id="about"
+   className="bg-gradient-to-br from-gray-700 via-gray-800 to-gray-700 text-white py-16">
       <div className="max-w-6xl mx-auto px-8 text-center">
         <h2 className="text-4xl font-bold mb-8">About Me</h2>
         <div className="flex flex-col items-center justify-center space-y-8">
