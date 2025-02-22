@@ -37,7 +37,7 @@ function Skills() {
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }} 
         id="skills"
-        className="h-screen bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 text-white flex items-center justify-center px-8"
+        className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800 text-white flex items-center justify-center px-8 py-5"
       >
         <div className="max-w-6xl mx-auto px-8 text-center">
           <h2 className="text-4xl font-bold mb-8">My Skills</h2>
@@ -48,7 +48,7 @@ function Skills() {
 
           <motion.div
             variants={gridContainerVariants}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3"
+            className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {/* Programming Languages */}
             <motion.div

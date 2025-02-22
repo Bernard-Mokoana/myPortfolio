@@ -39,7 +39,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="h-screen bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 text-white flex items-center justify-center px-4"
+      className="min-h-screen bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 text-white flex items-center justify-center px-4 py-5"
     >
       <motion.div
         className="max-w-6xl mx-auto px-8 text-center"
@@ -86,7 +86,7 @@ function Projects() {
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-800 text-white px-3 py-1 rounded text-sm"
+                  className="bg-gray-700 hover:bg-gray-800 text-white px-3 py-1 rounded text-sm"
                 >
                   View Live
                 </a>
@@ -94,7 +94,7 @@ function Projects() {
                   href={project.sourceCode}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-800 text-white px-3 py-1 rounded text-sm"
+                  className="bg-gray-700 hover:bg-gray-800 text-white px-3 py-1 rounded text-sm"
                 >
                   Source Code
                 </a>
