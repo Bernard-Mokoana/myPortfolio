@@ -97,8 +97,6 @@ function Hero() {
           <div className=" space-x-4">
             <button>  <a
               href="#projects"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-6 py-2 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
               >
                 View Projects
