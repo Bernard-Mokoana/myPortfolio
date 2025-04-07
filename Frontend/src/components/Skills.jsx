@@ -42,9 +42,9 @@ function Skills() {
         <div className="max-w-6xl mx-auto px-8 text-center">
           <h2 className="text-4xl font-bold mb-8">My Skills</h2>
 
-          <p className="text-lg mb-12">
+          {/* <p className="text-lg mb-12">
             Combining expertise in <span className="text-yellow-400">Computer Science</span> and <span className="text-green-400">Chemistry</span> to create innovative and impactful solutions.
-          </p>
+          </p> */}
 
           <motion.div
             variants={gridContainerVariants}

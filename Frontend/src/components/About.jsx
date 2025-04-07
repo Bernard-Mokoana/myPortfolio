@@ -17,7 +17,10 @@ function About() {
           </div> */}
           <div className="md:w-1/2">
             <p className="text-lg mb-4">
-              Hi! I&apos;m a passionate <span className="text-yellow-400">Computer Science</span> and <span className="text-green-400">Chemistry</span> student dedicated to bridging the gap between technology and science. My expertise lies in building innovative solutions that merge computational power with chemical insights.
+            I&apos;m passionate about software engineering, with a strong focus on backend development and full-stack application design. 
+            My technical skill set includes Node.js, Express.js, MongoDB, MySQL, React, and Tailwind CSS, which I leverage to build scalable, high-performance solutions.
+            Through hands-on project development, I’ve gained practical experience in end-to-end software system design, implementation, testing, and deployment. 
+            These experiences have sharpened my architectural thinking, strengthened my problem-solving abilities, and deepened my ability to build robust, maintainable applications.
             </p>
             <div className="flex justify-center space-x-8 mt-6">
               <div className="text-center">
