@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaChevronLeft, FaChevronRight, FaFlask, FaLaptop } from 'react-icons/fa';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaFlask,
+  FaLaptop,
+} from "react-icons/fa";
 
 function Education() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const educationSections = [
     {
-      icon: <FaLaptop size={28} className='text-blue-400 mr-3' />,
+      icon: <FaLaptop size={28} className="text-blue-400 mr-3" />,
       title: "Computer Science",
       modules: [
         "Introduction To Computing And Programming(Python)",
@@ -15,10 +20,12 @@ function Education() {
         "Object-Oriented Programming(Java)",
         "Data Structures and Algorithms(Java)",
         "Software Engineering",
+        "Artificial Intelligence(AI)",
+        "Database",
       ],
     },
     {
-      icon: <FaFlask size={28} className='text-green-400 mr-3' />,
+      icon: <FaFlask size={28} className="text-green-400 mr-3" />,
       title: "Chemistry",
       modules: [
         "Introductory Inorganic & Physical Chemistry",
@@ -30,7 +37,7 @@ function Education() {
       ],
     },
     {
-      icon: <FaLaptop size={28} className='text-yellow-400 mr-3' />,
+      icon: <FaLaptop size={28} className="text-yellow-400 mr-3" />,
       title: "Mathematics",
       modules: [
         "Introductory Algebra And Calculus I",
@@ -44,7 +51,8 @@ function Education() {
   ];
 
   const handleNext = () => {
-    if (currentIndex < educationSections.length - 1) setCurrentIndex(currentIndex + 1);
+    if (currentIndex < educationSections.length - 1)
+      setCurrentIndex(currentIndex + 1);
   };
 
   const handlePrevious = () => {
@@ -54,20 +62,27 @@ function Education() {
   const currentSection = educationSections[currentIndex];
 
   return (
-    <section id='education' 
-    className="relative z-10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-12 md:py-16">
-      <motion.div 
+    <section
+      id="education"
+      style={{ margin: "0", padding: "0", boxSizing: "border-box" }}
+      className="relative z-10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-12 md:py-16"
+    >
+      <motion.div
         className="max-w-6xl mx-auto px-4 sm:px-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8">My Education</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8">
+          My Education
+        </h2>
         <div className="relative">
           <button
             onClick={handlePrevious}
             className={`absolute left-0 top-1/2 transform -translate-y-1/2 text-white ${
-              currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "hover:text-gray-400"
+              currentIndex === 0
+                ? "opacity-50 cursor-not-allowed"
+                : "hover:text-gray-400"
             }`}
             disabled={currentIndex === 0}
             aria-label="Previous section"
@@ -95,7 +110,9 @@ function Education() {
           <button
             onClick={handleNext}
             className={`absolute right-0 top-1/2 transform -translate-y-1/2 text-white ${
-              currentIndex === educationSections.length - 1 ? "opacity-50 cursor-not-allowed" : "hover:text-gray-400"
+              currentIndex === educationSections.length - 1
+                ? "opacity-50 cursor-not-allowed"
+                : "hover:text-gray-400"
             }`}
             disabled={currentIndex === educationSections.length - 1}
             aria-label="Next section"

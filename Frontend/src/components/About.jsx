@@ -1,26 +1,37 @@
 import React from "react";
 import { FaFlask, FaLightbulb, FaUserGraduate } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function About() {
-  return(
-  <section id="about"
-   className="bg-gradient-to-br from-gray-700 via-gray-800 to-gray-700 text-white py-16">
+  return (
+    <section
+      id="about"
+      className="bg-gradient-to-br from-gray-700 via-gray-800 to-gray-700 text-white py-16"
+    >
       <div className="max-w-6xl mx-auto px-8 text-center">
         <h2 className="text-4xl font-bold mb-8">About Me</h2>
         <div className="flex flex-col items-center justify-center space-y-8">
-          {/* <div>
+          {/* Image section */}
+          <motion.div className="overflow-hidden rounded-full w-55 h-55 border-2 border-gray-800 shadow-lg flex-shrink-0 md:w-80 md:h-80">
             <img
-              src="/src/assets/images/IMG_3953.JPG"
-              alt="Profile Picture"
-              className="w-48 h-48 mx-auto rounded-full border-4 border-blue-400 shadow-lg"
+              src="./images/_DSC9489.JPG"
+              alt="Image"
+              className="w-full h-full object-cover"
             />
-          </div> */}
+          </motion.div>
+
           <div className="md:w-1/2">
             <p className="text-lg mb-4">
-            I&apos;m passionate about software engineering, with a strong focus on backend development and full-stack application design. 
-            My technical skill set includes Node.js, Express.js, MongoDB, MySQL, React, and Tailwind CSS, which I leverage to build scalable, high-performance solutions.
-            Through hands-on project development, I’ve gained practical experience in end-to-end software system design, implementation, testing, and deployment. 
-            These experiences have sharpened my architectural thinking, strengthened my problem-solving abilities, and deepened my ability to build robust, maintainable applications.
+              I&apos;m passionate about software engineering, with a strong
+              focus on backend development and full-stack application design. My
+              technical skill set includes Node.js, Express.js, MongoDB, MySQL,
+              React, and Tailwind CSS, which I leverage to build scalable,
+              high-performance solutions. Through hands-on project development,
+              I’ve gained practical experience in end-to-end software system
+              design, implementation, testing, and deployment. These experiences
+              have sharpened my architectural thinking, strengthened my
+              problem-solving abilities, and deepened my ability to build
+              robust, maintainable applications.
             </p>
             <div className="flex justify-center space-x-8 mt-6">
               <div className="text-center">
@@ -37,21 +48,17 @@ function About() {
               </div>
             </div>
             <p className="text-sm mt-6 text-gray-300">
-              Outside of academics, I enjoy exploring new technologies, conducting chemical experiments, and creating meaningful projects that make an impact. Let&apos;s work together to create something amazing!
+              Outside of academics, I enjoy exploring new technologies,
+              conducting chemical experiments, and creating meaningful projects
+              that make an impact. Let&apos;s work together to create something
+              amazing!
             </p>
           </div>
         </div>
       </div>
     </section>
-  )
-
+  );
 }
-
-
-
-
-
-
 
 // function About() {
 //   return (
