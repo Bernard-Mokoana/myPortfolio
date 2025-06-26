@@ -16,7 +16,7 @@ function About() {
           <motion.div className="flex justify-center">
             <div className="overflow-hidden rounded-full w-64 h-64 border-4 border-gray-600 shadow-xl">
               <img
-                src="./images/_DSC9489.JPG"
+                src="./images/DSC9489.JPG"
                 alt="Image"
                 className="w-full h-full object-cover"
               />
