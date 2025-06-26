@@ -8,19 +8,22 @@ function About() {
       id="about"
       className="bg-gradient-to-br from-gray-700 via-gray-800 to-gray-700 text-white py-16"
     >
-      <div className="max-w-6xl mx-auto px-8 text-center">
-        <h2 className="text-4xl font-bold mb-8">About Me</h2>
-        <div className="flex flex-col items-center justify-center space-y-8">
+      <div className="max-w-6xl mx-auto px-8">
+        <h2 className="text-4xl font-bold mb-12 text-center">About Me</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center space-y-8">
           {/* Image section */}
-          <motion.div className="overflow-hidden rounded-full w-55 h-55 border-2 border-gray-800 shadow-lg flex-shrink-0 md:w-80 md:h-80">
-            <img
-              src="./images/_DSC9489.JPG"
-              alt="Image"
-              className="w-full h-full object-cover"
-            />
+          <motion.div className="flex justify-center">
+            <div className="overflow-hidden rounded-full w-64 h-64 border-4 border-gray-600 shadow-xl">
+              <img
+                src="./images/_DSC9489.JPG"
+                alt="Image"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </motion.div>
 
-          <div className="md:w-1/2">
+          <div>
             <p className="text-lg mb-4">
               I&apos;m passionate about software engineering, with a strong
               focus on backend development and full-stack application design. My
@@ -59,19 +62,5 @@ function About() {
     </section>
   );
 }
-
-// function About() {
-//   return (
-//     <section id="about" className="py-16 px-8 bg-gray-100">
-//       <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
-//       <p className="text-center max-w-2xl mx-auto">
-//         I am a final-year Computer Science and Chemistry student passionate about
-//         software development and the intricacies of chemical processes. My projects
-//         bridge the gap between technology and science, offering innovative solutions
-//         in both fields.
-//       </p>
-//     </section>
-//   );
-// }
 
 export default About;
